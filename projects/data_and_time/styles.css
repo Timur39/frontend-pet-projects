@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+body {
+    background-color: #232428;
+}
+
+.container {
+    height: auto;
+    width: auto;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 0;
+    margin: 40px;
+    color: white;
+}
+
+header {
+    margin-right: 80px;
+    margin-bottom: 5px;
+}
+
+.main-block {
+    border: 2px solid transparent;
+    border-color: white;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 50px 30px 50px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    width: auto;
+    justify-content: center;
+}
+
+.date {
+    color: black;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.btn {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-full {
+    background-color: blue;
+}
+
+.btn-date {
+    background-color: green;
+}
+
+.btn-time {
+    background-color: red;
+}

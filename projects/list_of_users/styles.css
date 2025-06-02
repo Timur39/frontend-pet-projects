@@ -1,0 +1,45 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+body {
+    background-color: #212528;
+    color: white;
+
+}
+
+
+.main-block {
+    display: grid;
+    gap: 5px;
+    margin-top: 40px;
+    padding: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.input {
+    padding: 5px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.input:hover {
+    opacity: 0.95;
+}
+
+
+.list {
+    list-style-type: none;
+}
+
+.list li {
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+
+}

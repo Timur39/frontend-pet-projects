@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="styles-calc.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="input-1" class="calculator-screen" value="0"/>
+        <input type="text" id="input-2" class="calculator-screen" value="0"/>
+        <div class="calculator-keys">
+            <button type="button" class="operator" id="+">+</button>
+            <button type="button" class="operator" id="-">−</button>
+            <button type="button" class="operator" id="*">×</button>
+            <button type="button" class="operator" id="/">÷</button>
+        </div>
+        <div class="calculate">
+            <button type="button" class="calculate-btn" id="submit">Вычеслить</button>
+        </div>
+        <div class="result">
+            <h4>Результат:</h4>
+            <p id="result"></p>
+        </div>
+    </div>
+</body>
+</html>
