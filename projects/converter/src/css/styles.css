@@ -1,0 +1,469 @@
+@charset "UTF-8";
+.header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.header__title {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+.header__description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.footer {
+  text-align: center;
+}
+.footer__copyright {
+  opacity: 0.6;
+}
+
+.main__currency-converter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5%;
+  flex-wrap: wrap;
+}
+.main__converter-block {
+  color: var(--color-black);
+  background: var(--color-light-bg);
+  border-radius: var(--main-radius);
+  margin-right: 2%;
+  padding: 20px 15px 20px 15px;
+  width: 30%;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main__converter-block-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.main__converter-block-line {
+  margin-bottom: 15px;
+}
+.main__converter-block-input-form {
+  margin-bottom: 5%;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.main__converter-block-input-form-title {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.main__converter-block-input-form-input {
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--other-radius);
+  padding: 0.3em 0 0.3em 0.5em;
+  width: 48%;
+  margin-right: 5px;
+}
+.main__converter-block-input-form-select {
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--other-radius);
+  padding: 0.4em 0 0.4em 0.5em;
+  width: 48%;
+}
+.main__converter-block-reverse-btn {
+  padding: 0.5em;
+  border: 2px solid transparent;
+  background-color: var(--color-btn);
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+.main__converter-block-reverse-btn img {
+  transform: rotate(270deg);
+}
+.main__converter-block-output-form {
+  margin-bottom: 30px;
+}
+.main__converter-block-output-form-title {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.main__converter-block-output-form-output {
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--other-radius);
+  padding: 0.3em 0 0.3em 0.5em;
+  width: 48%;
+  margin-right: 5px;
+}
+.main__converter-block-output-form-select {
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--other-radius);
+  padding: 0.4em 0 0.4em 0.5em;
+  width: 48%;
+}
+.main__converter-block-currency-rate {
+  opacity: 0.6;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-align: center;
+}
+.main__currencies-block {
+  color: var(--color-black);
+  background: var(--color-light-bg);
+  border-radius: var(--main-radius);
+  padding: 20px 15px 10px 15px;
+  width: 30%;
+}
+.main__currencies-block-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.main__currencies-block-line {
+  margin-bottom: 20px;
+}
+.main__currencies-block-item {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  margin-bottom: 10px;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+}
+.main__currencies-block-item:hover {
+  background-color: var(--color-hover-currencies);
+  transition: background 0.3s ease;
+}
+.main__currencies-block-item-currency {
+  margin-right: auto;
+}
+.main__currencies-block-item-currency-title {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.main__currencies-block-item-currency-rate {
+  font-weight: bold;
+}
+.main__currencies-block-item-variability {
+  color: green;
+}
+.main__advantages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+  text-align: center;
+}
+.main__advantages-block {
+  border: 2px solid var(--color-transparent-bg);
+  border-radius: var(--main-radius);
+  margin-right: 2%;
+  background-color: var(--color-transparent-bg);
+  width: 20%;
+  padding: 2% 0;
+}
+.main__advantages-block:hover {
+  background-color: var(--color-hover-advantages);
+  transition: background 0.3s ease;
+}
+.main__advantages-block:last-child {
+  margin-right: 0;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+  */
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none], [fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none], [stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --main-radius: 20px;
+  --other-radius: 8px;
+}
+
+:root {
+  --color-btn: blue;
+  --color-black: black;
+  --color-white: white;
+  --color-light-gray: lightgray;
+  --color-light-bg: #f1f0fe;
+  --color-transparent-bg: rgba(255, 255, 255, 0.2);
+  --color-hover-currencies: #ececec;
+  --color-hover-advantages: rgba(255, 255, 255, 0.3);
+}
+
+body {
+  background: linear-gradient(135deg, #4365cf, #d24db2);
+  color: white;
+  padding-top: 8px;
+  font-family: "Roboto";
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+hr {
+  opacity: 0.5;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .main__converter-block,
+  .main__currencies-block {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .main__currency-converter,
+  .main__advantages {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__converter-block,
+  .main__currencies-block,
+  .main__advantages-block {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 3%;
+  }
+}
+@media (max-width: 480px) {
+  .main__converter-block-input-form-input,
+  .main__converter-block-input-form-select,
+  .main__converter-block-output-form-output,
+  .main__converter-block-output-form-select {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .main__converter-block-input-block,
+  .main__converter-block-output-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body.dark-theme {
+  background: #1a1a2e;
+  color: #f1f1f1;
+}
+
+body.dark-theme .main__converter-block,
+body.dark-theme .main__currencies-block {
+  background-color: #2e2e4e;
+  color: #f1f1f1;
+}
+
+body.dark-theme .main__currencies-block-item {
+  background-color: #444;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto");
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}/*# sourceMappingURL=styles.css.map */

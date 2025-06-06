@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(135deg, #4365cf, #d24db2);
+  color: white;
+  padding-top: 8px;
+  font-family: "Roboto";
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+hr {
+  opacity: 0.5;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .main__converter-block,
+  .main__currencies-block {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__currency-converter,
+  .main__advantages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__converter-block,
+  .main__currencies-block,
+  .main__advantages-block {
+    width: 90%;
+    margin-right: 0;
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main__converter-block-input-form-input,
+  .main__converter-block-input-form-select,
+  .main__converter-block-output-form-output,
+  .main__converter-block-output-form-select {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .main__converter-block-input-block,
+  .main__converter-block-output-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Темная тема
+
+body.dark-theme {
+  background: #1a1a2e;
+  color: #f1f1f1;
+}
+body.dark-theme .main__converter-block,
+body.dark-theme .main__currencies-block {
+  background-color: #2e2e4e;
+  color: #f1f1f1;
+}
+body.dark-theme .main__currencies-block-item {
+  background-color: #444;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+// @keyframes fade-in {
+//   from { opacity: 0; transform: translateY(10px); }
+//   to   { opacity: 1; transform: translateY(0); }
+// }
+
+// .main__converter-block,
+// .main__currencies-block {
+//   animation: fade-in 0.5s ease;
+// }

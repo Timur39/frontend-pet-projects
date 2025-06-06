@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Удобный конвертер валют с актуальными курсами онлайн."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+    <title>Currency converter</title>
+  </head>
+  <body>
+    <button id="theme-toggle">Сменить тему</button>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Конвертер валют</h1>
+        <p class="header__description">
+          Быстрая и точная конвертация валют с актуальными <br />
+          курсами обмена
+        </p>
+      </header>
+
+      <main class="main">
+        <section class="main__currency-converter">
+          <div class="main__converter-block">
+            <h2 class="main__converter-block-title">Конвертация валют</h2>
+            <hr class="main__converter-block-line" />
+            <form class="main__converter-block-input-form">
+              <h3 class="main__converter-block-input-form-title">Сумма</h3>
+              <input
+                type="number"
+                id="amount-input"
+                class="main__converter-block-input-form-input"
+                placeholder="Введите сумму"
+              />
+              <select
+                name="from-currency"
+                id="from-currency"
+                class="main__converter-block-input-form-select"
+              >
+                <option
+                  class="main__converter-block-input-form-select-item"
+                  value="USD"
+                >
+                  USD
+                </option>
+                <option
+                  class="main__converter-block-input-form-select-item"
+                  value="RUB"
+                >
+                  RUB
+                </option>
+                <option
+                  class="main__converter-block-input-form-select-item"
+                  value="EUR"
+                >
+                  EUR
+                </option>
+              </select>
+            </form>
+
+            <button
+              type="button"
+              id="reverse-btn"
+              class="main__converter-block-reverse-btn"
+              aria-label="Поменять валюты местами"
+            >
+              <img src="icons/Reverse.svg" alt="reverse-btn" width="20" height="20"/>
+            </button>
+
+            <form class="main__converter-block-output-form">
+              <h3 class="main__converter-block-output-form-title">Результат</h3>
+              <input
+                type="number"
+                id="result-output"
+                class="main__converter-block-output-form-output"
+                disabled
+              />
+              <select
+                name="to-currency"
+                id="to-currency"
+                class="main__converter-block-output-form-select"
+              >
+                <option
+                  class="main__converter-block-output-form-select-item"
+                  value="USD"
+                >
+                  USD
+                </option>
+                <option
+                  class="main__converter-block-output-form-select-item"
+                  value="RUB"
+                >
+                  RUB
+                </option>
+                <option
+                  class="main__converter-block-output-form-select-item"
+                  value="EUR"
+                >
+                  EUR
+                </option>
+              </select>
+            </form>
+
+            <p class="main__converter-block-currency-rate" id="rate"></p>
+          </div>
+
+          <div class="main__currencies-block">
+            <h2 class="main__currencies-block-title">Курсы валют</h2>
+            <hr class="main__currencies-block-line" />
+            <ul class="main__currencies-block-list">
+              <li class="main__currencies-block-item">
+                <div class="main__currencies-block-item-currency">
+                  <h3 class="main__currencies-block-item-currency-title">
+                    USD/EUR
+                  </h3>
+                  <p
+                    class="main__currencies-block-item-currency-rate"
+                    id="USD-EUR"
+                  >
+                    0.8415
+                  </p>
+                </div>
+                <p class="main__currencies-block-item-variability negative">
+                  -0.4777
+                </p>
+              </li>
+              <li class="main__currencies-block-item">
+                <div class="main__currencies-block-item-currency">
+                  <h3 class="main__currencies-block-item-currency-title">
+                    USD/RUB
+                  </h3>
+                  <p
+                    class="main__currencies-block-item-currency-rate"
+                    id="USD-RUB"
+                  >
+                    92.5015
+                  </p>
+                </div>
+                <p class="main__currencies-block-item-variability positive">
+                  +0.0010
+                </p>
+              </li>
+              <li class="main__currencies-block-item">
+                <div class="main__currencies-block-item-currency">
+                  <h3 class="main__currencies-block-item-currency-title">
+                    EUR/GBP
+                  </h3>
+                  <p
+                    class="main__currencies-block-item-currency-rate"
+                    id="EUR-GBP"
+                  >
+                    0.8842
+                  </p>
+                </div>
+                <p class="main__currencies-block-item-variability negative">
+                  -0.3700
+                </p>
+              </li>
+              <li class="main__currencies-block-item">
+                <div class="main__currencies-block-item-currency">
+                  <h3 class="main__currencies-block-item-currency-title">
+                    USD/JPY
+                  </h3>
+                  <p
+                    class="main__currencies-block-item-currency-rate"
+                    id="USD-JPY"
+                  >
+                    110.2670
+                  </p>
+                </div>
+                <p class="main__currencies-block-item-variability negative">
+                  -0.0013
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="main__advantages">
+          <div class="main__advantages-block">
+            <h2 class="main__advantages-block-title">Актуальные курсы</h2>
+            <p class="main__advantages-block-description">
+              Курсы обновляются в режиме реального времени
+            </p>
+          </div>
+          <div class="main__advantages-block">
+            <h2 class="main__advantages-block-title">Быстрая конвертация</h2>
+            <p class="main__advantages-block-description">
+              Мгновенный расчет с высокой точностью
+            </p>
+          </div>
+          <div class="main__advantages-block">
+            <h2 class="main__advantages-block-title">Удобный интерфейс</h2>
+            <p class="main__advantages-block-description">
+              Простой и интуитивно понятный дизайн
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__copyright">
+          © 2024 Currency Converter. Все права защищены.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
